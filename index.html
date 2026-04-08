@@ -109,7 +109,7 @@
 </div>
 <div class="flex gap-4 items-center">
 <a class="hidden md:block text-slate-400 font-medium hover:text-white transition-colors" href="https://github.com/TeeLapo6/Bonsai-Capture-Ext" target="_blank" rel="noreferrer">GitHub Repo</a>
-<a class="px-6 py-2 rounded-full digital-biome-gradient text-on-primary-fixed-variant font-bold scale-95 active:scale-90 transition-transform" href="#install">Load Unpacked</a>
+<a class="px-6 py-2 rounded-full digital-biome-gradient text-on-primary-fixed-variant font-bold scale-95 active:scale-90 transition-transform" href="downloads/bonsai-capture-alpha-v0.1.0.zip" download>Download Alpha</a>
 </div>
 </div>
 </nav>
@@ -130,16 +130,16 @@
                 Bonsai Capture is a Chrome extension that turns temporary AI chats — and their artifacts — into permanent, structured notes you own.
             </p>
 <div class="flex flex-col sm:flex-row gap-4">
-<a class="px-10 py-5 rounded-full digital-biome-gradient text-on-primary-fixed-variant font-bold text-xl flex items-center gap-3 shadow-xl shadow-primary/20 hover:scale-105 active:scale-95 transition-all" href="#install">
+<a class="px-10 py-5 rounded-full digital-biome-gradient text-on-primary-fixed-variant font-bold text-xl flex items-center gap-3 shadow-xl shadow-primary/20 hover:scale-105 active:scale-95 transition-all" href="downloads/bonsai-capture-alpha-v0.1.0.zip" download>
 <span class="material-symbols-outlined">download</span>
-                    Load Unpacked
+                    Download Prebuilt Alpha
                 </a>
 <a class="px-10 py-5 rounded-full glass-panel border border-white/10 text-on-surface font-semibold text-xl hover:bg-surface-container-high transition-colors" href="https://github.com/TeeLapo6/Bonsai-Capture-Ext" target="_blank" rel="noreferrer">
                     View Source
                 </a>
 </div>
 <p class="mt-5 text-sm text-on-surface-variant/80 max-w-2xl">
-                No store listing yet. Build the extension locally, then load the <span class="font-mono text-on-surface">dist/</span> folder in Chrome or Brave.
+                No store listing yet. Download the prebuilt alpha, unzip it, and load the extracted folder in Chrome or Brave. No <span class="font-mono text-on-surface">npm</span> or <span class="font-mono text-on-surface">bun</span> required.
             </p>
 <div class="mt-20 w-full max-w-5xl rounded-2xl overflow-hidden border border-white/5 shadow-2xl bg-[#1a2236]">
 <img class="w-full object-contain" data-alt="Bonsai Capture extension side panel showing captured AI chat artifacts and exports" src="assets/showcase/hero-capture.png"/>
@@ -369,34 +369,35 @@ across 4 research domains.
 </section>
 <!-- Install Guide -->
 <section id="install" class="py-24 max-w-7xl mx-auto px-8">
-<h2 class="text-3xl font-bold text-center mb-4">Get started with the unpacked alpha</h2>
-<p class="text-center text-on-surface-variant mb-16 max-w-3xl mx-auto">This alpha is meant to be built locally and loaded into Chrome or Brave as an unpacked extension.</p>
+<div class="text-center mb-16 max-w-3xl mx-auto">
+<span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-panel border border-primary/20 text-primary text-xs font-bold uppercase tracking-[0.2em] mb-5">Recommended <span class="material-symbols-outlined" style="font-size:1rem">download</span></span>
+<h2 class="text-3xl font-bold mb-4">Install the prebuilt alpha</h2>
+<p class="text-center text-on-surface-variant">Skip the local build. Download the packaged alpha, extract it, and load it directly into Chrome or Brave.</p>
+</div>
 <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
 <div class="relative">
 <span class="text-8xl font-black text-white/5 absolute -top-8 -left-4 select-none">1</span>
 <div class="relative z-10 pt-8">
-<h4 class="text-xl font-bold mb-2">Clone or download</h4>
-<p class="text-on-surface-variant text-sm mb-3">Get the source from GitHub and clone it locally.</p>
-<div class="bg-surface-container rounded-xl px-4 py-3 font-mono text-xs text-on-surface-variant mb-3 select-all overflow-x-auto">git clone https://github.com/TeeLapo6/Bonsai-Capture-Ext.git</div>
-<a class="text-xs text-primary font-semibold hover:underline inline-flex items-center gap-1" href="https://github.com/TeeLapo6/Bonsai-Capture-Ext" target="_blank" rel="noreferrer">View on GitHub <span class="material-symbols-outlined" style="font-size:0.85rem">open_in_new</span></a>
+<h4 class="text-xl font-bold mb-2">Download the alpha ZIP</h4>
+<p class="text-on-surface-variant text-sm mb-3">Grab the prebuilt package from this site. It already includes the compiled extension.</p>
+<a class="inline-flex items-center gap-2 px-4 py-3 rounded-xl digital-biome-gradient text-on-primary-fixed-variant font-semibold text-sm shadow-lg shadow-primary/10" href="downloads/bonsai-capture-alpha-v0.1.0.zip" download>
+<span class="material-symbols-outlined" style="font-size:1rem">download</span>
+Download v0.1.0 alpha
+</a>
 </div>
 </div>
 <div class="relative">
 <span class="text-8xl font-black text-white/5 absolute -top-8 -left-4 select-none">2</span>
 <div class="relative z-10 pt-8">
-<h4 class="text-xl font-bold mb-2">Build the extension</h4>
-<p class="text-on-surface-variant text-sm mb-3">Install dependencies and compile the extension.</p>
-<div class="bg-surface-container rounded-xl px-4 py-3 font-mono text-xs text-on-surface-variant space-y-1">
-<div>npm install</div>
-<div>npm run build</div>
-</div>
+<h4 class="text-xl font-bold mb-2">Extract the folder</h4>
+<p class="text-on-surface-variant text-sm mb-3">Unzip the download. You should end up with a <span class="font-mono text-on-surface">bonsai-capture-alpha</span> folder containing <span class="font-mono text-on-surface">manifest.json</span>.</p>
 </div>
 </div>
 <div class="relative">
 <span class="text-8xl font-black text-white/5 absolute -top-8 -left-4 select-none">3</span>
 <div class="relative z-10 pt-8">
 <h4 class="text-xl font-bold mb-2">Load unpacked</h4>
-<p class="text-on-surface-variant text-sm mb-3">Open <span class="font-mono text-on-surface">chrome://extensions</span>, enable Developer mode, and select the <span class="font-mono text-on-surface">dist/</span> folder.</p>
+<p class="text-on-surface-variant text-sm mb-3">Open <span class="font-mono text-on-surface">chrome://extensions</span>, enable Developer mode, and select the extracted <span class="font-mono text-on-surface">bonsai-capture-alpha</span> folder.</p>
 <a class="text-xs text-primary font-semibold hover:underline inline-flex items-center gap-1" href="https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked" target="_blank" rel="noreferrer">Chrome load unpacked guide <span class="material-symbols-outlined" style="font-size:0.85rem">open_in_new</span></a>
 </div>
 </div>
@@ -408,10 +409,14 @@ across 4 research domains.
 </div>
 </div>
 </div>
-<div class="mt-14 text-center">
+<div class="mt-14 flex flex-col sm:flex-row justify-center items-center gap-4 text-center">
+<a class="inline-flex items-center gap-2 px-8 py-4 rounded-full digital-biome-gradient text-on-primary-fixed-variant font-semibold shadow-lg shadow-primary/10 hover:scale-[1.02] active:scale-95 transition-transform" href="downloads/bonsai-capture-alpha-v0.1.0.zip" download>
+<span class="material-symbols-outlined">download</span>
+Download Prebuilt Alpha
+</a>
 <a class="inline-flex items-center gap-2 px-8 py-4 rounded-full glass-panel border border-white/10 text-on-surface font-semibold hover:bg-surface-container-high transition-colors" href="https://github.com/TeeLapo6/Bonsai-Capture-Ext#readme" target="_blank" rel="noreferrer">
 <span class="material-symbols-outlined">menu_book</span>
-Full README on GitHub
+Prefer building from source? Read the README
 </a>
 </div>
 </section>
@@ -457,11 +462,15 @@ Full README on GitHub
             <span data-fs-error="email" class="text-xs text-red-400"></span>
         </div>
         <div>
-            <label class="block text-sm font-medium mb-1" for="wl-use">What are you hoping to capture? <span class="text-on-surface-variant font-normal">(optional)</span></label>
-            <textarea id="wl-use" name="message" rows="3" data-fs-field placeholder="ChatGPT research, Claude artifacts, feedback..." class="w-full bg-surface-container border border-white/10 rounded-xl px-4 py-3 text-on-surface placeholder:text-on-surface-variant/50 focus:outline-none focus:border-primary/60 resize-none"></textarea>
+            <div class="flex items-center justify-between">
+                <label class="block text-sm font-medium mb-1" for="wl-use">What are you hoping to capture?</label>
+                <span class="text-xs text-on-surface-variant">Optional</span>
+            </div>
+            <textarea id="wl-use" name="message" rows="4" data-fs-field aria-describedby="wl-use-help" placeholder="Share platforms, artifact types, workflows, or improvements you'd like to see…" class="w-full bg-surface-container border border-white/10 rounded-xl px-4 py-3 text-on-surface placeholder:text-on-surface-variant/50 focus:outline-none focus:border-primary/60 resize-none"></textarea>
+            <p id="wl-use-help" class="mt-2 text-xs text-on-surface-variant leading-relaxed">Open-ended feedback is welcome. Tell me which providers you want supported, what artifact capture should improve, or how you want the workflow to feel.</p>
             <span data-fs-error="message" class="text-xs text-red-400"></span>
         </div>
-        <button type="submit" data-fs-submit-btn class="w-full px-6 py-3 rounded-full digital-biome-gradient text-on-primary-fixed-variant font-bold hover:scale-[1.02] active:scale-95 transition-transform">Join Waitlist</button>
+        <button type="submit" data-fs-submit-btn class="w-full px-6 py-3 rounded-full digital-biome-gradient text-on-primary-fixed-variant font-bold hover:scale-[1.02] active:scale-95 transition-transform">Submit feedback</button>
         <div data-fs-success class="hidden text-center text-primary font-semibold mt-4 py-6">✓ Thanks! Your request has been submitted.</div>
         <div data-fs-error class="hidden text-center text-red-400 font-semibold mt-4 py-6"></div>
     </form>
