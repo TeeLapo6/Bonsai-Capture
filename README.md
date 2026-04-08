@@ -1,47 +1,58 @@
-# Bonsai-Capture-Landing
-Landing page for Bonsai Capture - extract, own and reuse your AI conversations
+# Bonsai Capture — Landing Page
 
-## 🚀 Live Site
-[View Landing Page](http://taylorlaporte.me/Bonsai-Capture/)
+Marketing and install guide site for [Bonsai Capture](https://github.com/TeeLapo6/bonsai-capture-ext), a Chrome extension that captures AI conversations and their artifacts locally.
 
-## 🌱 What is Bonsai Capture?
+## Live Site
 
-Bonsai Capture extracts conversations from AI tools like ChatGPT, Claude, and Gemini into structured, portable data.
+[https://taylorlaporte.me/Bonsai-Capture/](https://taylorlaporte.me/Bonsai-Capture/)
 
-It preserves prompts, outputs, and provenance so workflows can be reused, analyzed, and improved.
+Hosted via GitHub Pages from the `main` branch of this repo.
 
-## 🧠 Why this exists
+## What this site covers
 
-AI workflows today are trapped inside chat interfaces.
+- Hero overview of the extension
+- Feature grid: multi-provider capture, artifact capture, structured exports, provenance
+- Real screenshot showcase (Gemini, ChatGPT, Claude captures)
+- Step-by-step load-unpacked install guide
+- Pro / background sync future roadmap section
 
-Bonsai Capture is the first step toward making them:
-- reusable
-- inspectable
-- reproducible
+## Supported providers (as of alpha v0.1.0)
 
-## 🌳 Part of the Bonsai Ecosystem
+- ChatGPT (`chatgpt.com`, `chat.openai.com`) — conversations, images, Deep Research, Canvas
+- Claude (`claude.ai`) — conversations, code artifacts, documents, canvas captures
+- Gemini (`gemini.google.com`) — conversations, images, video, immersive artifacts, Deep Research
+- Grok (`grok.com`) — conversations
+- Jules (`jules.google.com`) — task outputs, code artifacts
 
-This is the ingestion layer for the broader Bonsai platform:
-- Branch-first AI workflows
-- Fanout + evaluation
-- Harnessed execution
-- Inspectable systems
+## Development
 
-## 🛠 Development
+This is a static HTML site using Tailwind CSS via CDN. No build step required.
 
-This is a simple static site built with HTML + Tailwind.
-
-To run locally:
 ```bash
-open index.html
+# Serve locally with any static server, e.g.
+npx serve .
+# or just open index.html in a browser
 ```
 
-## 📬 Feedback
+All showcase screenshots live in `assets/showcase/`.
 
-Open an issue or reach out directly.
+## Linking to the extension
 
-Built in public
+The extension source is at: [https://github.com/TeeLapo6/bonsai-capture-ext](https://github.com/TeeLapo6/bonsai-capture-ext)
+
+The install guide on this site walks users through:
+1. Cloning or downloading the extension repo
+2. Running `npm install && npm run build`
+3. Loading `dist/` as an unpacked extension in Chrome or Brave
+
+## Deploying
+
+Push to `main` — GitHub Pages publishes automatically from the root of this branch.
+
+```bash
+git add -A && git commit -m "chore: update landing page" && git push origin main
+```
 
 ---
 
-**Bonsai | From chat → to system**
+**Bonsai Capture | Keep your AI conversations.**
