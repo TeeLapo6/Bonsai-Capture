@@ -1,0 +1,134 @@
+import React from 'react';
+import { Terminal, MapPin, Cpu, BookOpen, Layers, GitBranch, PlayCircle } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+
+export default function TaylorPortfolio() {
+  return (
+    <div className="min-h-screen bg-zinc-50 text-zinc-900 font-sans p-6 md:p-12">
+      <div className="max-w-5xl mx-auto space-y-16">
+        
+        {/* HERO / PLAYER PROFILE */}
+        <section className="flex flex-col md:flex-row gap-8 items-start md:items-center">
+          <div className="flex-1 space-y-6">
+            <div className="space-y-2">
+              <h1 className="text-5xl font-bold tracking-tight text-zinc-900">Taylor Laporte</h1>
+              <div className="flex items-center gap-4 text-zinc-600 text-lg">
+                <span className="flex items-center gap-1.5"><Terminal size={20} /> AI Developer & PM</span>
+                <span className="flex items-center gap-1.5"><MapPin size={20} /> Windsor, ON</span>
+              </div>
+            </div>
+            <p className="text-xl text-zinc-600 leading-relaxed max-w-2xl">
+              I build modular, local-first AI systems. With a background spanning Psychology, an MBA, and a Computer Science degree, I focus on the intersection of human behavior, product strategy, and orchestration architecture.
+            </p>
+            <div className="flex gap-4 pt-2">
+              <Button className="bg-zinc-900 text-white hover:bg-zinc-800">View Resume</Button>
+              <Button variant="outline" className="border-zinc-300">GitHub</Button>
+              <Button variant="outline" className="border-zinc-300">LinkedIn</Button>
+            </div>
+          </div>
+        </section>
+
+        {/* FLAGSHIP PROJECT: BONSAI */}
+        <section className="space-y-6">
+          <div className="flex items-center justify-between border-b border-zinc-200 pb-2">
+            <h2 className="text-2xl font-bold flex items-center gap-2">
+              <Layers className="text-zinc-500" /> Current Main Quest: The Bonsai Ecosystem
+            </h2>
+            <Badge variant="secondary" className="bg-emerald-100 text-emerald-800">Alpha Live</Badge>
+          </div>
+          
+          <Card className="bg-white border-zinc-200 shadow-sm overflow-hidden">
+            <div className="md:flex">
+              <div className="md:w-2/5 bg-zinc-900 p-8 text-white flex flex-col justify-center space-y-4">
+                <h3 className="text-3xl font-bold">Bonsai Capture</h3>
+                <p className="text-zinc-400">
+                  AI tools generate incredible knowledge—and then immediately lose it. Bonsai Capture is a browser extension that turns your interactions into durable, locally-owned assets.
+                </p>
+                <div className="pt-4 flex gap-3">
+                  <Button className="bg-white text-zinc-900 hover:bg-zinc-100">Get the Alpha</Button>
+                </div>
+              </div>
+              <div className="md:w-3/5 p-8 bg-zinc-50 flex flex-col justify-center">
+                <h4 className="text-sm font-bold text-zinc-500 uppercase tracking-wider mb-4">The Broader Architecture</h4>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {[
+                    { title: "Capture (Live)", desc: "Ingestion layer for browser-based LLM chats." },
+                    { title: "CLI (Building)", desc: "Rust-powered programmatic orchestration." },
+                    { title: "WebUI (Building)", desc: "Visual branch management for conversation trees." },
+                    { title: "Hub (Planned)", desc: "Centralized knowledge and multi-agent routing." }
+                  ].map((item, i) => (
+                    <div key={i} className="bg-white p-4 rounded-lg border border-zinc-200 shadow-sm">
+                      <h5 className="font-bold text-zinc-900">{item.title}</h5>
+                      <p className="text-sm text-zinc-600 mt-1">{item.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </Card>
+        </section>
+
+        {/* THE LAB / SIDE QUESTS */}
+        <section className="space-y-6">
+          <div className="flex items-center gap-2 border-b border-zinc-200 pb-2">
+            <h2 className="text-2xl font-bold flex items-center gap-2">
+              <Cpu className="text-zinc-500" /> The Vibe-Coded Lab
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              { name: "Interrupting Cow", type: "Tooling", desc: "Human-in-the-loop orchestration tool for pausing and annotating agent browser sessions." },
+              { name: "25 Hours", type: "Productivity", desc: "Time manipulation and advanced scheduling concepts." },
+              { name: "Prompt Trees", type: "Architecture", desc: "Semantic chunking and branching frameworks for continuous context." }
+            ].map((proj, i) => (
+              <Card key={i} className="bg-white border-zinc-200 shadow-sm hover:shadow-md transition-shadow">
+                <CardHeader className="pb-2">
+                  <div className="flex justify-between items-start">
+                    <CardTitle className="text-lg">{proj.name}</CardTitle>
+                    <Badge variant="outline" className="text-xs text-zinc-500 border-zinc-300">{proj.type}</Badge>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-zinc-600">{proj.desc}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        {/* TECH & PHILOSOPHY INVENTORY */}
+        <section className="space-y-6">
+          <div className="flex items-center gap-2 border-b border-zinc-200 pb-2">
+            <h2 className="text-2xl font-bold flex items-center gap-2">
+              <GitBranch className="text-zinc-500" /> Loadout & Philosophy
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="space-y-4">
+              <h3 className="font-semibold text-lg text-zinc-900">Core Stack</h3>
+              <div className="flex flex-wrap gap-2">
+                {["Rust", "Python", "TypeScript", "React", "Tailwind", "PHP", "MySQL"].map((tech) => (
+                  <Badge key={tech} className="bg-zinc-100 text-zinc-800 hover:bg-zinc-200 border-none px-3 py-1 text-sm">{tech}</Badge>
+                ))}
+              </div>
+            </div>
+            <div className="space-y-4">
+              <h3 className="font-semibold text-lg text-zinc-900">Design Tenets</h3>
+              <ul className="space-y-2 text-zinc-600 text-sm">
+                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-zinc-400"></div> Local-first computing & edge execution</li>
+                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-zinc-400"></div> High inspectability and data provenance</li>
+                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-zinc-400"></div> Modular, pluggable agentic architecture</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <footer className="pt-12 pb-6 text-center text-zinc-500 text-sm border-t border-zinc-200">
+          <p>Built by Taylor Laporte. Own your context.</p>
+        </footer>
+      </div>
+    </div>
+  );
+}
